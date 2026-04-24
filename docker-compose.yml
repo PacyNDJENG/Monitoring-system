@@ -2,7 +2,7 @@
 nano docker-compose.yml
 ```
 
-```bash
+```yaml
 services:
   beszel:
     image: henrygd/beszel
