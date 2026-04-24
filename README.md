@@ -36,21 +36,25 @@ Solve real-world networking and system integration challenges
 🚀 Deployment
 1. Clone repository
   ```bash git clone https://github.com/pacyNDJENG/Monitoring-system.git
-  cd Monitoring-system```
+  cd Monitoring-system
+```
 2. Start server
-   ```bash docker compose up -d```
+   ```bash docker compose up -d
+   ```
 📍 Access dashboard:
    http://localhost:8090
 
 🖥️ Agents Setup
 🐧 Linux Agent
-  ```bash scripts/install-agent-ubuntu.sh```
+  ```bash scripts/install-agent-ubuntu.sh
+  ```
 🪟 Windows Agent
   .\scripts\install-agent-windows.ps1
 
 🔐 Network Layer (Tailscale)
 Secure communication is handled via VPN mesh network: 
-  ```bash curl -fsSL https://tailscale.com/install.sh | sh```
+  ```bash curl -fsSL https://tailscale.com/install.sh | sh
+  ```
   sudo tailscale up
   ✔ Private IPs (100.x.x.x)
   ✔ Encrypted communication
@@ -82,7 +86,8 @@ sudo systemctl status apache2
 
 ### Test service
 ```bash bash id="apache3"
-curl http://localhost ```
+curl http://localhost
+```
 ✔ Used to verify HTTP service availability
 
 ## 📧 Postfix Mail Server Monitoring
@@ -103,7 +108,8 @@ sudo systemctl status postfix
 
 ### Test mail delivery
 ```bash id="postfix3"
-echo "Test email from monitoring system" | mail -s "Postfix Test" user@example.com ```
+echo "Test email from monitoring system" | mail -s "Postfix Test" user@example.com
+```
 ✔ Used to verify SMTP service availability
 
 
