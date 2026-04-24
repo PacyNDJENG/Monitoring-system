@@ -1,0 +1,51 @@
+```bash
+nano docker-compose.yml
+```
+
+```bash
+services:
+  beszel:
+    image: henrygd/beszel
+    container_name: beszel
+    restart: always
+    ports:
+      - 8090:8090
+    volumes:
+      - ./data:/beszel_data
+    version: "3.8"
+    ```
+
+🚀 How to run it
+Once saved:
+```bash
+docker compose up -d
+```
+Check:
+```bash
+docker ps
+```bash
+
+📌 What each part means
+🧩 version
+Defines Docker Compose format
+
+🧩 services
+Your application(s)
+
+🧩 beszel
+Your monitoring server container
+
+🧩 image
+Docker image used (Beszel)
+
+🧩 ports
+```bash
+host:container
+8090:8090
+```bash
+
+🧩 restart policy
+```bash
+always
+```
+keeps server running after reboot
