@@ -35,22 +35,22 @@ Solve real-world networking and system integration challenges
   
 🚀 Deployment
 1. Clone repository
-  git clone https://github.com/pacyNDJENG/Monitoring-system.git
-  cd Monitoring-system
+  ```bash git clone https://github.com/pacyNDJENG/Monitoring-system.git
+  cd Monitoring-system```
 2. Start server
-   docker compose up -d
+   ```bash docker compose up -d```
 📍 Access dashboard:
    http://localhost:8090
 
 🖥️ Agents Setup
 🐧 Linux Agent
-  bash scripts/install-agent-ubuntu.sh
+  ```bash scripts/install-agent-ubuntu.sh```
 🪟 Windows Agent
   .\scripts\install-agent-windows.ps1
 
 🔐 Network Layer (Tailscale)
 Secure communication is handled via VPN mesh network: 
-  curl -fsSL https://tailscale.com/install.sh | sh
+  ```bash curl -fsSL https://tailscale.com/install.sh | sh```
   sudo tailscale up
   ✔ Private IPs (100.x.x.x)
   ✔ Encrypted communication
@@ -74,34 +74,36 @@ sudo apt install apache2 -y
 
 
 ### Service management
-id="apache2"
+```bash id="apache2"
 sudo systemctl start apache2
 sudo systemctl enable apache2
 sudo systemctl status apache2
+```
 
 ### Test service
-bash id="apache3"
-curl http://localhost
+```bash bash id="apache3"
+curl http://localhost ```
 ✔ Used to verify HTTP service availability
 
 ## 📧 Postfix Mail Server Monitoring
 Postfix is used as a mail transfer agent for testing email delivery services.
 
 ### Installation
-bash id="postfix1"
+```bash id="postfix1"
 sudo apt update
 sudo apt install postfix -y
+```
 
 ### Service management
-bash id="postfix2"
+```bash id="postfix2"
 sudo systemctl start postfix
 sudo systemctl enable postfix
 sudo systemctl status postfix
-
+```
 
 ### Test mail delivery
-bash id="postfix3"
-echo "Test email from monitoring system" | mail -s "Postfix Test" user@example.com
+```bash id="postfix3"
+echo "Test email from monitoring system" | mail -s "Postfix Test" user@example.com ```
 ✔ Used to verify SMTP service availability
 
 
