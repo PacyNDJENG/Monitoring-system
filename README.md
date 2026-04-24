@@ -39,23 +39,22 @@ Solve real-world networking and system integration challenges
   cd Monitoring-system
 ```
 2. Start server
-   ```bash docker compose up -d
-   ```
+   ```bash docker compose up -d```
+   
 📍 Access dashboard:
    http://localhost:8090
 
 🖥️ Agents Setup
 🐧 Linux Agent
-  ```bash scripts/install-agent-ubuntu.sh
-  ```
+  ```bash scripts/install-agent-ubuntu.sh```
 🪟 Windows Agent
-  .\scripts\install-agent-windows.ps1
+ ```bash .\scripts\install-agent-windows.ps1 ```
 
 🔐 Network Layer (Tailscale)
 Secure communication is handled via VPN mesh network: 
   ```bash curl -fsSL https://tailscale.com/install.sh | sh
+     sudo tailscale up
   ```
-  sudo tailscale up
   ✔ Private IPs (100.x.x.x)
   ✔ Encrypted communication
   ✔ Cross-network connectivity
@@ -75,7 +74,6 @@ Apache is used as a web service to validate server availability.
 sudo apt update
 sudo apt install apache2 -y
 ```
-
 
 ### Service management
 ```bash id="apache2"
