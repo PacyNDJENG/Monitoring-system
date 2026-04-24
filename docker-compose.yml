@@ -1,9 +1,9 @@
-```bash
+```yaml
 nano docker-compose.yml
 ```
 
-version: "3.8"
 ```yaml
+version: "3.8"
 services:
   beszel:
     image: henrygd/beszel
@@ -17,11 +17,11 @@ services:
 
 🚀 How to run it
 Once saved:
-```bash
+```yaml
 docker compose up -d
 ```
 Check:
-```bash
+```yaml
 docker ps
 ```
 
@@ -39,10 +39,10 @@ Your monitoring server container
 Docker image used (Beszel)
 
 🧩 ports
-```bash
+
 host:container
 8090:8090
-```
+
 🧩 restart policy
 always
 keeps server running after reboot
