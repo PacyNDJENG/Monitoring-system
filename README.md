@@ -39,16 +39,22 @@ Solve real-world networking and system integration challenges
   cd Monitoring-system
 ```
 2. Start server
-   ```bash docker compose up -d```
+   ```bash
+   docker compose up -d
+   ```
    
 📍 Access dashboard:
    http://localhost:8090
 
 🖥️ Agents Setup
 🐧 Linux Agent
-  ```bash scripts/install-agent-ubuntu.sh```
+  ```bash 
+  scripts/install-agent-ubuntu.sh
+```
 🪟 Windows Agent
- ```bash .\scripts\install-agent-windows.ps1 ```
+ ```bash 
+ .\scripts\install-agent-windows.ps1
+```
 
 🔐 Network Layer (Tailscale)
 Secure communication is handled via VPN mesh network: 
@@ -76,7 +82,8 @@ sudo apt install apache2 -y
 ```
 
 ### Service management
-```bash id="apache2"
+```bash
+id="apache2"
 sudo systemctl start apache2
 sudo systemctl enable apache2
 sudo systemctl status apache2
@@ -92,20 +99,23 @@ curl http://localhost
 Postfix is used as a mail transfer agent for testing email delivery services.
 
 ### Installation
-```bash id="postfix1"
+```bash
+id="postfix1"
 sudo apt update
 sudo apt install postfix -y
 ```
 
 ### Service management
-```bash id="postfix2"
+```bash
+id="postfix2"
 sudo systemctl start postfix
 sudo systemctl enable postfix
 sudo systemctl status postfix
 ```
 
 ### Test mail delivery
-```bash id="postfix3"
+```bash
+id="postfix3"
 echo "Test email from monitoring system" | mail -s "Postfix Test" user@example.com
 ```
 ✔ Used to verify SMTP service availability
