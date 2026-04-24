@@ -2,16 +2,18 @@
 nano docker-compose.yml
 ```
 
+version: "3.8"
 ```yaml
 services:
-beszel:
-image: henrygd/beszel
-container_name: beszel
-restart: always
-ports: -8090:8090
-volumes: - ./data:/beszel_data
-version: "3.8"
-    ```
+  beszel:
+    image: henrygd/beszel
+    container_name: beszel
+    restart: always
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./data:/beszel_data
+```
 
 🚀 How to run it
 Once saved:
