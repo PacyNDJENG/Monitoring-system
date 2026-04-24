@@ -66,10 +66,12 @@ These services are installed and managed on monitored nodes and their availabili
 ## 🌐 Apache Web Server Monitoring
 Apache is used as a web service to validate server availability.
 
-### Installation
-'''bash id="apache1"
+## 🌐 Apache Installation
+```bash
 sudo apt update
-sudo apt install apache2 -y'''
+sudo apt install apache2 -y
+```
+
 
 ### Service management
 id="apache2"
